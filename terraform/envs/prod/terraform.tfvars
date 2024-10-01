@@ -1,0 +1,12 @@
+vpc_name                   = "vpc-prod-tech"
+cluster_name               = "prod-tech-challange"
+cidr                       = "10.0.0.0/16"
+cluster_version            = "1.30"
+ami_type                   = "AL2023_x86_64_STANDARD"
+instance_types             = ["t4g.medium", "m5.large"]
+min_size                   = 2
+max_size                   = 4
+desired_size               = 2
+metrics_server_version     = "3.12.1"
+kube_state_metrics_version = "5.25.1"
+ecr_repository_name        = "prod-tech-challange"
