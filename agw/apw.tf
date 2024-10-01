@@ -31,11 +31,11 @@ module "api_gateway" {
   authorizers = {
     "lambda" = {
       authorizer_type  = "REQUEST"
-      enable_simple_responses = true
       identity_sources = ["$request.header.Authorization"]
       name             = "lambda-auth"
       authorizer_uri   = var.lambda_auth
-      authorizer_payload_format_version = "2.0"
+      enable_simple_responses = false
+      authorizer_payload_format_version = "1.0"
     }
   }
 
